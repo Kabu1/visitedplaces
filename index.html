@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
-    <title>Address Book</title>
+    <title>Places Visited</title>
 </head>
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <h2>Add a place that you have Visited</h2>
-                <form action="" id="location">
+                <form id="place">
                     <div class="form-group">
                         <label for="location">Location</label>
                         <input type="" class="form-control" id="location">
@@ -29,17 +29,31 @@
                     </div>
                     <div class="form-group">
                         <label for="notes">Notes</label>
-                        <textarea class="form-control" id="notes" cols="30" rows="10"></textarea>
+                        <input type="text" class="form-control" id="notes">
                     </div>
+                    <button type="submit" class="btn btn-info">Submit</button>
                 </form>
+                <h2>Places Visited</h2>
+                <ul id="visits">
+
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <div id="show-places">
+                    <h2>places</h2>
+                    <p>location: <span class="location"></span></p>
+                    <p>landmark: <span class="landmark"></span></p>
+                    <p>time:<span class="time"></span></p>
+                    <p>notes: <span class="notes"></span></p>
+
+
+
+
+                </div>
+
             </div>
         </div>
 
-
     </div>
-
-
-
-
 </body>
 </html>

@@ -1,0 +1,13 @@
+#show-places{
+    display: none;
+}
+.place{
+    cursor: pointer;
+    color: rgb(51, 53, 182);
+
+}
+.place:hover{
+    text-decoration: underline;
+
+}
+ 

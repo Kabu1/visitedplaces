@@ -13,20 +13,28 @@ $(document).ready(function(){
         var inputTime = $("input#time").val();
         var inputNotes = $("input#notes").val();
 
-        var newPlace = (inputLocation, inputLandmark, inputTime, inputNotes);
+        var newPlace = new Place(inputLocation, inputLandmark, inputTime, inputNotes);
 
-        $("ul#visits").append("<li><span class='visits'>" + newPlace.location + "</span></li>"   )
+        $("ul#visits").append("<li><span class='place'>" + newPlace.location + "</span></li>");
 
         $("input#location").val("");
         $("input#landmark").val("");
         $("input#time").val("");
         $("input#notes").val("");
 
+        $(".place").last().click(function(){
+            $("#show-places").show();
+            $("#show-places h2").text(newPlace.location);
+            $(".location").text(newPlace.location);
+            $(".landmark").text(newPlace.landmark);
+            $(".time").text(newPlace.time);
+            $(".notes").text(newPlace.notes);
 
+        });
 
-
-
+        event.preventDefault();
 
     });
-    event.preventDefault();
+   
 });
+
